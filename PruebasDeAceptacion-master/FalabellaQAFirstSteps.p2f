@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?p2f version='1.0.0'?>
+<p2f version='1.0.0'>
+  <ius size='2'>
+    <iu id='org.eclipse.egit.feature.group' name='Git integration for Eclipse' version='5.0.0.201806131550-r'>
+      <repositories size='2'>
+        <repository location='http://download.eclipse.org/releases/latest'/>
+        <repository location='http://download.eclipse.org/releases/photon/'/>
+      </repositories>
+    </iu>
+    <iu id='org.eclipse.egit.mylyn.feature.group' name='Git integration for Eclipse - Task focused interface' version='5.0.0.201806131550-r'>
+      <repositories size='2'>
+        <repository location='http://download.eclipse.org/releases/latest'/>
+        <repository location='http://download.eclipse.org/releases/photon/'/>
+      </repositories>
+    </iu>
+  </ius>
+</p2f>
