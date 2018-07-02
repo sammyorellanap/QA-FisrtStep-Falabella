@@ -1,0 +1,23 @@
+Feature: Proceso de compra en retail
+
+Scenario: Proceso de compra 
+given Abrimos el navegador y vamos al sitio web del retail donde se desea comprar un producto
+when el usuario seleccione un producto para comprar y haga clik en agregar a la Bolsa 
+And el usuario presiona el botón Ir a comprar y seleciona opciones de entrega del producto "<entrega>"
+And el usuario selecciona la forma de pago "<pago>" e ingresa el rut "<rut>" y la contraseña "<contraseña>" de la entidad bancaria
+Then el usuario debera ver mensaje "<mensaje>"
+
+Examples:
+|entrega|pago|rut|contraseña|mensaje|
+|Domicilio|RedCompra|17676738-3|Prueba123|Compra se realiza con exito|
+|Domicilio|RedCompra|17676738-4|Prueba123|Datos mal ingresados|
+|Domicilio|RedCompra|17676738-3|Falabella123|Datos mal ingresados|
+|Domicilio|Tarjeta de credito|17676738-3|Prueba123|Compra se realiza con exito|
+|Domicilio|Tarjeta de credito|17676738-2|Prueba123|Datos mal ingresados|
+|Domicilio|Tarjeta de credito|17676738-3|Falabella123|Datos mal ingresados|
+|Tienda|RedCompra|17676738-3|Prueba123|Compra se realiza con exito|
+|Tienda|RedCompra|17676738-4|Prueba123|Datos mal ingresados|
+|Tienda|RedCompra|17676738-3|Falabella123|Datos mal ingresados|
+|Tienda|Tarjeta de credito|17676738-3|Prueba123|Compra se realiza con exito|
+|Tienda|Tarjeta de credito|17676738-2|Prueba123|Datos mal ingresados|
+|Tienda|Tarjeta de credito|17676738-3|Falabella123|Datos mal ingresados|

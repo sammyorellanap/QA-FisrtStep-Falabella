@@ -1,0 +1,15 @@
+Feature: Aumento de cupo tarjeta de crédito
+
+Scenario: Aumento de cupo tarjeta de crédito
+given Abrimos el navegador y vamos al sitio web de la entidad Bancaria
+when el usuario ingresa monto "<monto>"  que quiere aumentar en la tarjeta de crédito 
+And el usuario presione click en el botón aumento de cupo
+Then el usuario debera ver el mensaje "<mensaje>"
+
+Examples:
+|monto|mensaje|
+|$2.000.000|Aumento de cupo fue realizado exitosamente|
+|-$100.000|No se puede ingresar aumento de cupo en negativo|
+|(Vacio)|Debe ingresar un monto para el aumento de cupo, no puede estar vacio|
+|$&/&%|Debe ingresar solo números para el aumento de cupo|
+|$40.0000.0000|Aumento de cupo NO esta permitido por monto muy elevado|
